@@ -3,6 +3,7 @@
 
 import os
 import sys
+import codecs
 
 
 try:
@@ -11,7 +12,7 @@ except ImportError:
     from distutils.core import setup
 
 
-with open('README.rst') as readme_file:
+with codecs.open('README.rst', 'r', 'utf-8') as readme_file:
     readme = readme_file.read()
 
 with open('HISTORY.rst') as history_file:
